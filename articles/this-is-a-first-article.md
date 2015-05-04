@@ -10,6 +10,7 @@ title: This is a first article!
 > What a nice quote!
 
 Some code:
+
     $var = 'foo';
     $foo = $var;
     // ...
