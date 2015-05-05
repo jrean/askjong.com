@@ -1,4 +1,4 @@
-title: This is a third article!
+title: This is a third article oh yeah!
 slug: Wtf the slug is different from the title!!!!
 -------
 ## And a nice title!!
