@@ -43,8 +43,7 @@ that bad!
 ## Bonus
 
 > As I do you probably use a [Vagrant](https://www.vagrantup.com/ "Vagrant")
-virtual machine? Maybe [Laravel Homestead](https://github.com/laravel/homestead
-"Laravel Homestead on Github")? Here is a little trick to not stay stuck. Put
-your packages inside your `shared folder` because it won't like symbolic links
-outside of it...
+virtual machine? Maybe [Laravel Homestead](https://github.com/laravel/homestead "Laravel Homestead on Github")?
+Here is a little trick to not stay stuck. Put your packages inside your `shared
+folder` because it won't like symbolic links outside of it...
 
