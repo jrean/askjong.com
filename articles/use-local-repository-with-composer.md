@@ -24,7 +24,7 @@ Update your `composer.json` with the following:
 > It is still time consuming to `composer update` each time a change is done.
 We can use a symbolic link to save some time.
 
-Inside the project `vendor/` directory where you are requiring your package,
+Inside the project `vendor/` directory of the project requiring your package,
 remove the package directory if it already exists and create a symbolic link instead:
 
     cd project/vendor/
