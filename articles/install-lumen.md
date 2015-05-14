@@ -1,5 +1,5 @@
 title: Install Lumen via Installer or Composer
-tags: [Lumen, Composer, Php]
+tags: [lumen, composer, php]
 -------
 ## Via Lumen Installer
 
