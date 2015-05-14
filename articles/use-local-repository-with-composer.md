@@ -34,7 +34,7 @@ remove the package directory if it already exists and create a symbolic link ins
     ln -s /your/local/repository/acme/package /path/to/project/vendor/acme/package
 
 > Update your package source code and it will be available inside your project
-without any aditional steps. Of course this is for developping and testing
+without any additional steps. Of course this is for developping and testing
 only. Beware, as soon as you will run a new `composer update` command it may
 lead to some troubles. The best is to remove the symbolic link before, then run
 the `composer update` command and re-create the symbolic link just after. Not
