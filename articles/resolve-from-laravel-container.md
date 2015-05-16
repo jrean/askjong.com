@@ -62,9 +62,9 @@ Inside the `app/Http/routes.php` for instance.
 
 `$this` is an instance of `\App\Providers\RouteServiceProvider` and **extends**
 `\Illuminate\Foundation\Support\Providers\RouteServiceProvider` which
-**extends** `\Illuminate\Support\ServiceProvider`. The
-`\Illuminate\Contracts\Foundation\Application` instance is accessible through
-the `$app` attribute.
+**extends** `\Illuminate\Support\ServiceProvider`.
+The `\Illuminate\Contracts\Foundation\Application` instance is accessible
+through the `$app` attribute.
 
 ## Injecting the Application Instance
 
