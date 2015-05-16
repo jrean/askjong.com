@@ -1,5 +1,5 @@
 title: Resolve From Laravel Container
-tags: [laravel, lumen, ioc, php]
+tags: [laravel, ioc, php]
 ---
 ## The Service Container is the Application
 
