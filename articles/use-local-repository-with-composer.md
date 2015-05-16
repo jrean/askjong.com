@@ -1,6 +1,6 @@
 title: Use Local Repository with Composer
 tags: [vcs, git, composer, php]
--------
+---
 > When developping composer packages it can be painfull to commit and push (to
 github for instance) for each change we have done then update composer for the
 project we are requiring that package. It is even worth when we just want to test

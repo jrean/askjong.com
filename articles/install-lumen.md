@@ -1,6 +1,6 @@
 title: Install Lumen via Installer or Composer
 tags: [lumen, composer, php]
--------
+---
 ## Via Lumen Installer
 
     composer global require "laravel/lumen-installer=~1.0"
