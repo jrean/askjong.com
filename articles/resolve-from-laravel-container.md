@@ -395,6 +395,8 @@ and learn how they work. Here is some ways to interact with the
 All these different ways will return the list of all configuration files
 available in the `config/` folder.
 
+    var_dump(Config::all());
+    // or
     var_dump(config()->all());
     // or
     var_dump(app('config')->all());
@@ -409,6 +411,8 @@ available in the `config/` folder.
 
 Lets access to the `app.php` configuration file.
 
+    var_dump(Config::get('app'));
+    // or
     var_dump(config()->get('app'));
     // or
     var_dump(app('config')->get('app'));
@@ -426,6 +430,8 @@ Lets access to the `app.php` configuration file.
 The magic can go on and on. We can navigate through the array with dot
 notation.
 
+    var_dump(Config::get('app.timezone'));
+    // or
     var_dump(config()->get('app.timezone'));
     // or
     var_dump(app('config')->get('app.timezone'));
