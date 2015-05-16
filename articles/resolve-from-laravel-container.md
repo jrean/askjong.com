@@ -15,7 +15,7 @@ Application itself. The container is a kind of box where we can push things in
 `\Illuminate\Container\Container` *implements*
 `\Illuminate\Contracts\Container\Container`.
 
-### Resolving the Application Instance
+## Resolving the Application Instance
 
 There are different ways to **resolve** the `\Illuminate\Foundation\Application` instance.
 * The Facade
@@ -23,7 +23,7 @@ There are different ways to **resolve** the `\Illuminate\Foundation\Application`
 * The Attribute
 * The Dependency Injection
 
-#### The Facade
+### The Facade
 
     var_dump(\App::getInstance());
     // or
@@ -41,11 +41,11 @@ or
     // or
     var_dump(App::getFacadeRoot());
 
-#### The Helper
+### The Helper
 
     var_dump(app());
 
-#### The Attribute
+### The Attribute
 
 We may have sometime access out of the box to the `\Illuminate\Foundation\Application` instance.
 Inside the `app/Http/routes.php` for instance.
@@ -66,12 +66,12 @@ Inside the `app/Http/routes.php` for instance.
 `\Illuminate\Contracts\Foundation\Application` instance is accessible through
 the `$app` attribute.
 
-### Injecting the Application Instance
+## Injecting the Application Instance
 
-* `'Illuminate\Contracts\Container\Container;'`
-* `'Illuminate\Contracts\Foundation\Application;'`
-* `'Illuminate\Container\Container;'`
-* `'Illuminate\Foundation\Application;'`
+* `\Illuminate\Contracts\Container\Container`
+* `\Illuminate\Contracts\Foundation\Application`
+* `\Illuminate\Container\Container`
+* `\Illuminate\Foundation\Application`
 
 Type hint any of these **contracts** (interfaces) or **concrete**
 implementation classes and Laravel will **resolve** the
@@ -89,7 +89,7 @@ that and pretty fast.
 * Constructor Dependency Injection
 * Method Dependency Injection
 
-#### Constructor Dependency Injection
+### Constructor Dependency Injection
 
 > The instance is available for the entiere class.
 
@@ -183,7 +183,7 @@ Type hint the **concrete** implementation
         var_dump($this->app);
     }
 
-#### Method Dependency Injection
+### Method Dependency Injection
 
 > The instance is available only for that method.
 
@@ -248,7 +248,7 @@ Type hint the **concrete** implementation
         var_dump($app);
     }
 
-### Resolving a Service out of the Container
+## Resolving a Service out of the Container
 
 > Laravel is a fantastic toolbox and it provides many services out of the box.
 To illustrate the next steps we will use the `\Illuminate\Config\Repository`
@@ -257,7 +257,7 @@ the container.
 
 Lets resolve the `Illuminate\Config\Repository` instance.
 
-#### The Facade
+### The Facade
 
     var_dump(\Config::getFacadeRoot());
 
@@ -267,7 +267,7 @@ or
 
     var_dump(Config::getFacadeRoot());
 
-#### The Helper
+### The Helper
 
     var_dump(config());
     // or
@@ -291,19 +291,19 @@ done the following and have resolved the same **concrete** instance of
 
 * `var_dump(app('Illuminate\Contracts\Config\Repository'));`
 
-#### The Attribute
+### The Attribute
 
     Route::get('/test', function() {
         var_dump($this->app->config);
     });
 
 
-### Injecting the Config Instance
+## Injecting the Config Instance
 
 * `\Illuminate\Contracts\Config\Repository`
 * `\Illuminate\Config\Repository`
 
-#### Constructor Dependency Injection
+### Constructor Dependency Injection
 
 > The instance is available for the entiere class.
 
@@ -351,7 +351,7 @@ Type hint the **concrete** implementation
         var_dump($this->config);
     }
 
-#### Method Dependency Injection
+### Method Dependency Injection
 
 > The instance is available only for that method.
 
@@ -385,7 +385,7 @@ Type hint the **concrete** implementation
         var_dump($config);
     }
 
-### Bonus
+## Bonus
 
 > We are now able to resolve existing services out of the container. For each
 of these we need of course to digg into the [Laravel API Documentation](http://laravel.com/api/5.0/ "The Laravel Api Documentation")
