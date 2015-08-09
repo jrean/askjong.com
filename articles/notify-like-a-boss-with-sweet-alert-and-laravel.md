@@ -217,7 +217,9 @@ public function foo()
 
 To customize the partial run the following command:
 
-- `php artisan vendor:publish --provider='UxWeb\SweetAlert\SweetAlertServiceProvider'`
+```
+php artisan vendor:publish --provider='UxWeb\SweetAlert\SweetAlertServiceProvider'
+```
 
 The partial is located within the `resources/views/vendor/sweet/` directory.
 
