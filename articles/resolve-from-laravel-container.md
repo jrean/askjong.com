@@ -91,7 +91,7 @@ that and pretty fast.
 
 ### Constructor Dependency Injection
 
-> The instance is available for the entiere class.
+> The instance is available for the entire class.
 
 Type hint the **contract** (interface)
 `\Illuminate\Contracts\Container\Container`.
@@ -305,7 +305,7 @@ done the following and have resolved the same **concrete** instance of
 
 ### Constructor Dependency Injection
 
-> The instance is available for the entiere class.
+> The instance is available for the entire class.
 
 Type hint the **contract** (interface)
 `\Illuminate\Contracts\Config\Repository`.

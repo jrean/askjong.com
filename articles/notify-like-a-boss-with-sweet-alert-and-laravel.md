@@ -255,7 +255,7 @@ Here is the default view provided by the package:
 
 ### Custom View
 
-You can completly rewrite and customize the view to your needs by mixing the
+You can completely rewrite and customize the view to your needs by mixing the
 built-in and package options.
 
 ```php
