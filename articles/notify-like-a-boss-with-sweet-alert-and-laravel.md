@@ -4,7 +4,7 @@ tags: [php, laravel, package]
 
 ## Alerts are Front End Logs
 
-Even for the smalest web application it could be usefull to display some little
+Even for the smallest web application it could be useful to display some little
 messages to the end user. What comes first in mind is the javascript `alert()`
 function. Yes, but it is ugly! What if we need something custom? Something
 designed? Something with the ability to display more than just a message?
