@@ -3,7 +3,7 @@ tags: [laravel, lumen, php, sqlite, homestead]
 ---
 Sometime a simple sqlite database suffices to get the job done.
 With Laravel, it's very quick and easy to configure connections.
-Unfortunatly I had a hard time to figure out why the basic settings didn't
+Unfortunately I had a hard time to figure out why the basic settings didn't
 work. I was stuck with the following error:
 
 ```
