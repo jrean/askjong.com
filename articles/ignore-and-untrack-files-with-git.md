@@ -6,7 +6,7 @@ tags: [git, command-line]
 
 Inside your project root directory, where your repository has been initialized,
 create or edit if it already exists a file `.gitignore`.
-Whitin this file you can add file paths or directory paths you don't want git
+Within this file you can add file paths or directory paths you don't want git
 to track.
 
 If you are lazy and don't want to run `vim` to edit the file you can do the
