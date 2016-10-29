@@ -1,5 +1,5 @@
 title: Use Sqlite with Homestead
-photo: 9a2d8cf6_hre8u1.jpg
+photo: v1477712069/9a2d8cf6_hre8u1.jpg
 tags: [laravel, lumen, php, sqlite, homestead]
 ---
 Sometime a simple sqlite database suffices to get the job done.
