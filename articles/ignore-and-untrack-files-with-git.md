@@ -1,4 +1,5 @@
 title: Ignore and Untrack Files with Git
+photo: v1477663916/photo-1464245051818-30da1a636203_z0i8h5.jpg
 tags: [git, command-line]
 ---
 
