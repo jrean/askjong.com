@@ -1,4 +1,5 @@
 title: Resolve From Laravel Container
+photo: v1477712217/photo-1465844880937-7c02addc633b_kr6zsc.jpg
 tags: [laravel, ioc, php]
 ---
 ## The Service Container is the Application
