@@ -71,4 +71,4 @@ Copy the `id` from the command output then run the following new command:
 vagrant reload :id --provision
 ```
 
-You're done! Happy Codding.
+You're done! Happy Coding.
