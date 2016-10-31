@@ -22,7 +22,7 @@ Update the following file:
 Edit the `sqlite` array inside the `connections` array and name your database
 if you don't want to stick with the default name.
 
-```
+``` {.class-test}
 'connections' => [
 
     'sqlite' => [
