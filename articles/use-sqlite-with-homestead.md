@@ -36,20 +36,22 @@ Create a new `.sqlite` database file inside the `storage/` folder.
 Assuming you are in the root directory of your project, you can do the
 following command:
 
-`touch storage/:database_name.sqlite`
+```bash
+touch storage/:database_name.sqlite
+```
 
 ## Homestead Config
 
 By default `homestead` defines a `homestead` database in its `Homestead.yaml`
 configuration file.
 
-```
+```vim
 vim ~/.homestead/Homestead.yaml
 ```
 
 Edit the key `Databases`.
 
-```
+```yaml
 databases:
     - :database_name 
 ```
@@ -59,13 +61,13 @@ databases:
 Prior to get your changes available you must reload `homestead` and
 re-provision it.
 
-```
+```bash
 vagrant global-status
 ```
 
 Copy the `id` from the command output then run the following new command:
 
-```
+```bash
 vagrant reload :id --provision
 ```
 
