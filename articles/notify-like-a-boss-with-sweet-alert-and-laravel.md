@@ -1,4 +1,5 @@
 title: Notify like a boss with Sweet Alert and Laravel
+photo: v1477663916/photo-1464245051818-30da1a636203_z0i8h5.jpg
 tags: [php, laravel, package]
 ---
 
@@ -119,7 +120,7 @@ Include to your master layout or within any blade template the following lines:
 ## Use the SweetAlert package for Laravel
 
 SweetAlert for Laravel may be used in two flavors, with the Facade and with a
-helper function. In both situation you will have access to the same methods:
+helper function. In both situations you will have access to the same methods:
 
 - `message($text, $title = '', $type = null)`
 
@@ -152,7 +153,7 @@ By default, all alerts will dismiss after 1800 milliseconds.
 
 - `persistent($buttonText = 'OK')`
 
-Make the alert persistent with a confirmation button.
+Makes the alert persistent with a confirmation button.
 
 ### The Facade
 

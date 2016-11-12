@@ -1,15 +1,16 @@
 title: Ignore and Untrack Files with Git
+photo: v1477711923/photo-1474546652694-a33dd8161d66_ep0gor.jpg
 tags: [git, command-line]
 ---
 
 ## Ignoring Files and Directories
 
 Inside your project root directory, where your repository has been initialized,
-create or edit if it already exists a file `.gitignore`.
-Within this file you can add file paths or directory paths you don't want git
+create a file called `.gitignore` or edit a pre-existing `.gitignore` file.
+Within this file you can add file paths or directory paths that you don't want git
 to track.
 
-If you are lazy and don't want to run `vim` to edit the file you can do the
+If you are lazy and don't want to run `vim` to edit the file you can run the
 following command:
 
 ```bash
@@ -20,7 +21,7 @@ It will prepend `:path_to_ignore` to the existing `.gitignore` content.
 
 ## Untrack Files and Directories
 
-Sometime you may want to stop tracking.
+Sometimes you may want to stop tracking.
 
 - Edit your `.gitignore` file as mentioned above.
 - Untrack
@@ -34,9 +35,11 @@ untrack.
 
 - Commit
 
-Once you have tell to git to stop tracking you must commit.
+Once you have told git to stop tracking the file, you must commit.
 
 ```bash
 git add .gitignore
 git commit -m "Ignoring..."
 ```
+
+Happy coding.
