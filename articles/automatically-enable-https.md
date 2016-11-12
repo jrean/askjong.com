@@ -157,7 +157,7 @@ Restart Nginx to make the change available.
 sudo service nginx restart
 ```
 
-## Automating renewal
+## Automating Renewal
 
 Let's Encrypt certificates last for 90 days, it's highly advisable to create a
 cronjob to automatically renew the certificate(s).
