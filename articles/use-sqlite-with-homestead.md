@@ -53,7 +53,7 @@ Edit the key `Databases`.
 
 ```yaml
 databases:
-    - :database_name 
+    - :database_name
 ```
 
 ## Reload and Re-Provision Homestead
@@ -71,4 +71,4 @@ Copy the `id` from the command output then run the following new command:
 vagrant reload :id --provision
 ```
 
-You're done! Happy Coding.
+Happy coding.
