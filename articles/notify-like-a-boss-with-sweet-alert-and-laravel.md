@@ -79,7 +79,7 @@ From the [source](https://github.com/t4t5/sweetalert "SweetAlert Github")
 
 Or with Bower
 
-```
+```bash
 bower install sweetalert
 ```
 
@@ -217,7 +217,7 @@ public function foo()
 
 To customize the partial run the following command:
 
-```
+```bash
 php artisan vendor:publish --provider='UxWeb\SweetAlert\SweetAlertServiceProvider'
 ```
 
@@ -278,3 +278,5 @@ built-in and package options.
 
 Note that you must use `""` (double quotes) to wrap the values except for the
 `timer` option value.
+
+Happy coding.

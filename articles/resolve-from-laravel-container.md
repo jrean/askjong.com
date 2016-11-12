@@ -25,40 +25,50 @@ There are different ways to **resolve** the `\Illuminate\Foundation\Application`
 
 ### The Facade
 
-    var_dump(\App::getInstance());
-    // or
-    var_dump(\App::getFacadeApplication());
-    // or
-    var_dump(\App::getFacadeRoot());
+```
+var_dump(\App::getInstance());
+// or
+var_dump(\App::getFacadeApplication());
+// or
+var_dump(\App::getFacadeRoot());
+```
 
 or
 
-    use App;
+```
+use App;
 
-    var_dump(App::getInstance());
-    // or
-    var_dump(App::getFacadeApplication());
-    // or
-    var_dump(App::getFacadeRoot());
+var_dump(App::getInstance());
+// or
+var_dump(App::getFacadeApplication());
+// or
+var_dump(App::getFacadeRoot());
+```
 
 ### The Helper
 
-    var_dump(app());
+```
+var_dump(app());
+```
 
 ### The Attribute
 
 We may have sometime access out of the box to the `\Illuminate\Foundation\Application` instance.
 Inside the `app/Http/routes.php` for instance.
 
-    Route::get('/test', function() {
-        var_dump($this->app);
-    });
+```
+Route::get('/test', function() {
+	var_dump($this->app);
+});
+```
 
-> Curious to know why? Try the following:
+Curious to know why? Try the following:
 
-    Route::get('/test', function() {
-        var_dump($this);
-    });
+```
+Route::get('/test', function() {
+	var_dump($this);
+});
+```
 
 `$this` is an instance of `\App\Providers\RouteServiceProvider` and **extends**
 `\Illuminate\Foundation\Support\Providers\RouteServiceProvider` which
@@ -84,173 +94,190 @@ Keep in mind when one needs the `\Illuminate\Foundation\Application` instance
 it can be resolved with the *helper* or the *facade* call. Nothing wrong with
 that and pretty fast.
 
-> A more *OOP* approach is to use both:
+A more *OOP* approach is to use both:
 
 * Constructor Dependency Injection
 * Method Dependency Injection
 
 ### Constructor Dependency Injection
 
-> The instance is available for the entire class.
+The instance is available for the entire class.
 
 Type hint the **contract** (interface)
 `\Illuminate\Contracts\Container\Container`.
 
-    ...
+```
+...
 
-    use Illuminate\Contracts\Container\Container;
+use Illuminate\Contracts\Container\Container;
 
-    ...
+...
 
-    protected $app;
+protected $app;
 
-    public function __construct(Container $app)
-    {
-        $this->app = $app;
-    }
+public function __construct(Container $app)
+{
+	$this->app = $app;
+}
 
-    public function test()
-    {
-        var_dump($this->app);
-    }
+public function test()
+{
+	var_dump($this->app);
+}
+```
 
 or
 
 Type hint the **contract** (interface)
 `\Illuminate\Contracts\Foundation\Application`.
 
-    ...
+```
+...
 
-    use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\Foundation\Application;
 
-    ...
+...
 
-    protected $app;
+protected $app;
 
-    public function __construct(Application $app)
-    {
-        $this->app = $app;
-    }
+public function __construct(Application $app)
+{
+	$this->app = $app;
+}
 
-    public function test()
-    {
-        var_dump($this->app);
-    }
+public function test()
+{
+	var_dump($this->app);
+}
+```
 
 or
 
 Type hint the **concrete** implementation
 `\Illuminate\Container\Container`.
 
-    ...
+```
+...
 
-    use Illuminate\Container\Container;
+use Illuminate\Container\Container;
 
-    ...
+...
 
-    protected $app;
+protected $app;
 
-    public function __construct(Container $app)
-    {
-        $this->app = $app;
-    }
+public function __construct(Container $app)
+{
+	$this->app = $app;
+}
 
-    public function test()
-    {
-        var_dump($this->app);
-    }
+public function test()
+{
+	var_dump($this->app);
+}
+```
 
 or
 
 Type hint the **concrete** implementation
 `\Illuminate\Foundation\Application`.
 
-    ...
+```
+...
 
-    use Illuminate\Foundation\Application;
+use Illuminate\Foundation\Application;
 
-    ...
+...
 
-    protected $app;
+protected $app;
 
-    public function __construct(Application $app)
-    {
-        $this->app = $app;
-    }
+public function __construct(Application $app)
+{
+	$this->app = $app;
+}
 
-    public function test()
-    {
-        var_dump($this->app);
-    }
+public function test()
+{
+	var_dump($this->app);
+}
+```
 
 ### Method Dependency Injection
 
-> The instance is available only for that method.
+The instance is available only for that method.
 
 Type hint the **contract** (interface)
 `\Illuminate\Contracts\Container\Container`.
-    ...
 
-    use Illuminate\Contracts\Container\Container;
+```
+...
 
-    ...
+use Illuminate\Contracts\Container\Container;
 
-    public function test(Container $app)
-    {
-        var_dump($app);
-    }
+...
+
+public function test(Container $app)
+{
+	var_dump($app);
+}
+```
 
 or
 
 Type hint the **contract** (interface)
 `\Illuminate\Contracts\Foundation\Application`.
 
-    ...
+```
+...
 
-    use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\Foundation\Application;
 
-    ...
+...
 
-    public function test(Application $app)
-    {
-        var_dump($app);
-    }
+public function test(Application $app)
+{
+	var_dump($app);
+}
+```
 
 or
 
 Type hint the **concrete** implementation
 `\Illuminate\Container\Container`.
 
-    ...
+```
+...
 
-    use Illuminate\Container\Container;
+use Illuminate\Container\Container;
 
-    ...
+...
 
-    public function test(Container $app)
-    {
-        var_dump($app);
-    }
+public function test(Container $app)
+{
+	var_dump($app);
+}
+```
 
 or
 
 Type hint the **concrete** implementation
 `\Illuminate\Foundation\Application`.
 
-    ...
+```
+...
 
-    use Illuminate\Foundation\Application;
+use Illuminate\Foundation\Application;
 
-    ...
+...
 
-    public function test(Application $app)
-    {
-        var_dump($app);
-    }
+public function test(Application $app)
+{
+	var_dump($app);
+}
+```
 
 ## Resolving a Service out of the Container
 
-> Laravel is a fantastic toolbox and it provides many services out of the box.
+Laravel is a fantastic toolbox and it provides many services out of the box.
 To illustrate the next steps we will use the `\Illuminate\Config\Repository`
 service. As seen before, there are different ways to resolve something out of
 the container.
@@ -259,25 +286,31 @@ Lets resolve the `Illuminate\Config\Repository` instance.
 
 ### The Facade
 
-    var_dump(\Config::getFacadeRoot());
+```
+var_dump(\Config::getFacadeRoot());
+```
 
 or
 
-    use Config;
+```
+use Config;
 
-    var_dump(Config::getFacadeRoot());
+var_dump(Config::getFacadeRoot());
+```
 
 ### The Helper
 
-    var_dump(config());
-    // or
-    var_dump(app('config'));
-    // or
-    var_dump(app('Illuminate\Config\Repository'));
-    // or
-    var_dump(app()->config);
-    // or
-    var_dump(app()['config']);
+```
+var_dump(config());
+// or
+var_dump(app('config'));
+// or
+var_dump(app('Illuminate\Config\Repository'));
+// or
+var_dump(app()->config);
+// or
+var_dump(app()['config']);
+```
 
 * `app('Illuminate\Config\Repository');`
 
@@ -293,10 +326,11 @@ done the following and have resolved the same **concrete** instance of
 
 ### The Attribute
 
-    Route::get('/test', function() {
-        var_dump($this->app->config);
-    });
-
+```
+Route::get('/test', function() {
+	var_dump($this->app->config);
+});
+```
 
 ## Injecting the Config Instance
 
@@ -305,89 +339,97 @@ done the following and have resolved the same **concrete** instance of
 
 ### Constructor Dependency Injection
 
-> The instance is available for the entire class.
+The instance is available for the entire class.
 
 Type hint the **contract** (interface)
 `\Illuminate\Contracts\Config\Repository`.
 
-    ...
+```
+...
 
-    use Illuminate\Contracts\Config\Repository;
+use Illuminate\Contracts\Config\Repository;
 
-    ...
+...
 
-    protected $config;
+protected $config;
 
-    public function __construct(Repository $config)
-    {
-        $this->config = $config;
-    }
+public function __construct(Repository $config)
+{
+	$this->config = $config;
+}
 
-    public function test()
-    {
-        var_dump($this->config);
-    }
+public function test()
+{
+	var_dump($this->config);
+}
+```
 
 or
 
 Type hint the **concrete** implementation
 `\Illuminate\Config\Repository`.
 
-    ...
+```
+...
 
-    use Illuminate\Config\Repository;
+use Illuminate\Config\Repository;
 
-    ...
+...
 
-    protected $config;
+protected $config;
 
-    public function __construct(Repository $config)
-    {
-        $this->config = $config;
-    }
+public function __construct(Repository $config)
+{
+	$this->config = $config;
+}
 
-    public function test()
-    {
-        var_dump($this->config);
-    }
+public function test()
+{
+	var_dump($this->config);
+}
+```
 
 ### Method Dependency Injection
 
-> The instance is available only for that method.
+The instance is available only for that method.
 
 Type hint the **contract** (interface)
 `\Illuminate\Contracts\Config\Repository`.
 
-    ...
+```
+...
 
-    use Illuminate\Contracts\Config\Repository;
+use Illuminate\Contracts\Config\Repository;
 
-    ...
+...
 
-    public function test(Repository $config)
-    {
-        var_dump($config);
-    }
+public function test(Repository $config)
+{
+	var_dump($config);
+}
+```
 
 or
 
 Type hint the **concrete** implementation
 `\Illuminate\Config\Repository`.
 
-    ...
+```
+...
 
-    use Illuminate\Config\Repository;
+use Illuminate\Config\Repository;
 
-    ...
+...
 
-    public function test(Repository $config)
-    {
-        var_dump($config);
-    }
+public function test(Repository $config)
+{
+	var_dump($config);
+}
+```
 
 ## Bonus
 
-> We are now able to resolve existing services out of the container. For each
+We are now able to resolve existing services out of the container. For each
 of these we need of course to digg into the [Laravel API Documentation](http://laravel.com/api/5.0/ "The Laravel Api Documentation")
 and learn how they work. Here is some ways to interact with the
 `\Illuminate\Config\Repository` service.
@@ -395,53 +437,61 @@ and learn how they work. Here is some ways to interact with the
 All these different ways will return the list of all configuration files
 available in the `config/` folder.
 
-    var_dump(Config::all());
-    // or
-    var_dump(config()->all());
-    // or
-    var_dump(app('config')->all());
-    // or
-    var_dump(app('Illuminate\Contracts\Config\Repository')->all());
-    // or
-    var_dump(app('Illuminate\Config\Repository')->all());
-    // or
-    var_dump(app()->config->all());
-    // or
-    var_dump(app()['config']->all());
+```
+var_dump(Config::all());
+// or
+var_dump(config()->all());
+// or
+var_dump(app('config')->all());
+// or
+var_dump(app('Illuminate\Contracts\Config\Repository')->all());
+// or
+var_dump(app('Illuminate\Config\Repository')->all());
+// or
+var_dump(app()->config->all());
+// or
+var_dump(app()['config']->all());
+```
 
-Lets access to the `app.php` configuration file.
+Let's access to the `app.php` configuration file.
 
-    var_dump(Config::get('app'));
-    // or
-    var_dump(config()->get('app'));
-    // or
-    var_dump(app('config')->get('app'));
-    // or
-    var_dump(app('Illuminate\Contracts\Config\Repository')->get('app'));
-    // or
-    var_dump(app('Illuminate\Config\Repository')->get('app'));
-    // or
-    var_dump(app()->config->get('app'));
-    // or
-    var_dump(app()['config']->get('app'));
-    // or
-    var_dump(app()['config']['app']);
+```
+var_dump(Config::get('app'));
+// or
+var_dump(config()->get('app'));
+// or
+var_dump(app('config')->get('app'));
+// or
+var_dump(app('Illuminate\Contracts\Config\Repository')->get('app'));
+// or
+var_dump(app('Illuminate\Config\Repository')->get('app'));
+// or
+var_dump(app()->config->get('app'));
+// or
+var_dump(app()['config']->get('app'));
+// or
+var_dump(app()['config']['app']);
+```
 
 The magic can go on and on. We can navigate through the array with dot
 notation.
 
-    var_dump(Config::get('app.timezone'));
-    // or
-    var_dump(config()->get('app.timezone'));
-    // or
-    var_dump(app('config')->get('app.timezone'));
-    // or
-    var_dump(app('Illuminate\Contracts\Config\Repository')->get('app.timezone'));
-    // or
-    var_dump(app('Illuminate\Config\Repository')->get('app.timezone'));
-    // or
-    var_dump(app()->config->get('app.timezone'));
-    // or
-    var_dump(app()['config']->get('app.timezone'));
-    // or
-    var_dump(app()['config']['app.timezone']);
+```
+var_dump(Config::get('app.timezone'));
+// or
+var_dump(config()->get('app.timezone'));
+// or
+var_dump(app('config')->get('app.timezone'));
+// or
+var_dump(app('Illuminate\Contracts\Config\Repository')->get('app.timezone'));
+// or
+var_dump(app('Illuminate\Config\Repository')->get('app.timezone'));
+// or
+var_dump(app()->config->get('app.timezone'));
+// or
+var_dump(app()['config']->get('app.timezone'));
+// or
+var_dump(app()['config']['app.timezone']);
+```
+
+Happy coding.

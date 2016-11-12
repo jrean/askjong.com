@@ -12,7 +12,7 @@ to track.
 If you are lazy and don't want to run `vim` to edit the file you can do the
 following command:
 
-```
+```bash
 echo ":path_to_ignore" >> .gitignore
 ```
 
@@ -25,7 +25,7 @@ Sometime you may want to stop tracking.
 - Edit your `.gitignore` file as mentioned above.
 - Untrack
 
-```
+```bash
 git rm --cached :path_to_untrack
 ```
 
@@ -36,7 +36,7 @@ untrack.
 
 Once you have tell to git to stop tracking you must commit.
 
-```
+```bash
 git add .gitignore
 git commit -m "Ignoring..."
 ```
