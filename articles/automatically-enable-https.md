@@ -1,5 +1,5 @@
 title: Automatically enable HTTPS on your website with EFF's Certbot, deploying Let's Encrypt certificates
-photo: 1468070454955-c5b6932bd08d_kvvmni.jpg
+photo: v1478940435/photo-1468070454955-c5b6932bd08d_kvvmni.jpg
 tags: [security, command-line, nginx, server]
 ---
 
