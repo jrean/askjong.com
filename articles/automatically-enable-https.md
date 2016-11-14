@@ -183,7 +183,7 @@ your needs.
 
 ```
 # Every day at 4:30 am
-30 4 * * * sudo /opt/letsencrypt/letsencrypt-auto renew --quiet --post-hook "sudo service nginx reload" >> /var/log/le-renew.log
+30 4 * * * sudo certbot renew --quiet --post-hook "sudo service nginx reload" >> /var/log/le-renew.log
 ```
 
 Happy coding.
