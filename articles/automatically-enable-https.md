@@ -175,7 +175,7 @@ do anything except testing the process.
 ### Add a Cronjob
 
 ```
-crontab -e
+[sudo] crontab -e
 ```
 
 Then add the following command to your crontab. Adjust the settings to suit
