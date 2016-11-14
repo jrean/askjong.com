@@ -70,17 +70,25 @@ The `-w option` indicates the webroot of your project. Usually the path to the
 
 The following files will be generated:
 
-**The Let's Encrypt private key**
-- `/etc/letsencrypt/live/example.com/privkey.pem`
+- **The Let's Encrypt private key**
+```
+/etc/letsencrypt/live/example.com/privkey.pem
+```
 
-**The Let's Encrypt certificate**
-- `/etc/letsencrypt/live/example.com/cert.pem`
+- **The Let's Encrypt certificate**
+```
+/etc/letsencrypt/live/example.com/cert.pem
+```
 
-**The Let's Encrypt intermediates certificates**
-- `/etc/letsencrypt/live/example.com/chain.pem`
+- **The Let's Encrypt intermediates certificates**
+```
+/etc/letsencrypt/live/example.com/chain.pem
+```
 
-**The Let's Encrypt certificate and intermediates certificates**
-- `/etc/letsencrypt/live/example.com/fullchain.pem`
+- **The Let's Encrypt certificate and intermediates certificates**
+```
+/etc/letsencrypt/live/example.com/fullchain.pem
+```
 
 Backup the entire `/etc/letsencrypt` directory to a secure location. In
 addition to the certificate, the directory also contains your Let’s Encrypt
