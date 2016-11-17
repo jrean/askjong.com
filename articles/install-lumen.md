@@ -1,7 +1,11 @@
 title: Install Lumen via Installer or Composer
 photo: v1477712872/photo-1454779132693-e5cd0a216ed3_qkwcmp.jpg
 tags: [lumen, composer, php]
+intro: How to install Lumen via the installer or Composer.
 ---
+
+This article covers how to install Lumen via the installer or Composer.
+
 ## Via Lumen Installer
 
 ```bash

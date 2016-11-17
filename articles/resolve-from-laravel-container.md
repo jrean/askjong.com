@@ -1,7 +1,11 @@
 title: Resolve From Laravel Container
 photo: v1477712217/photo-1465844880937-7c02addc633b_kr6zsc.jpg
 tags: [laravel, ioc, php]
+intro: Discover and learn how to resolve from the Laravel Container.
 ---
+
+This article discribes and covers how to resolve from the Laravel Container.
+
 ## The Service Container is the Application
 
 The Laravel service container is a powerful tool for managing class
@@ -79,10 +83,12 @@ through the `$app` attribute.
 
 ## Injecting the Application Instance
 
-* `\Illuminate\Contracts\Container\Container`
-* `\Illuminate\Contracts\Foundation\Application`
-* `\Illuminate\Container\Container`
-* `\Illuminate\Foundation\Application`
+```
+\Illuminate\Contracts\Container\Container
+\Illuminate\Contracts\Foundation\Application
+\Illuminate\Container\Container
+\Illuminate\Foundation\Application
+```
 
 Type hint any of these **contracts** (interfaces) or **concrete**
 implementation classes and Laravel will **resolve** the
@@ -335,8 +341,10 @@ Route::get('/test', function() {
 
 ## Injecting the Config Instance
 
-* `\Illuminate\Contracts\Config\Repository`
-* `\Illuminate\Config\Repository`
+```
+\Illuminate\Contracts\Config\Repository
+\Illuminate\Config\Repository
+```
 
 ### Constructor Dependency Injection
 

@@ -1,7 +1,10 @@
 title: Ignore and Untrack Files with Git
 photo: v1477711923/photo-1474546652694-a33dd8161d66_ep0gor.jpg
 tags: [git, command-line]
+intro: How to ignore and untrack files and directories with Git.
 ---
+
+This article covers how to ignore and untrack files and directories with Git.
 
 ## Ignoring Files and Directories
 

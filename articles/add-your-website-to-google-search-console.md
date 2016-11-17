@@ -1,6 +1,7 @@
 title: Add Your Website to Google Search Console (Webmaster Tools)
 photo: v1479280352/photo-1477013743164-ffc3a5e556da_y0vbmo.jpg
 tags: [seo, google]
+intro: How to add your website to Google Search Console (Webmaster Tools).
 ---
 
 This article covers how to add a new property (website) to the Google Search

@@ -1,7 +1,10 @@
 title: Notify like a boss with Sweet Alert and Laravel
 photo: v1477663916/photo-1464245051818-30da1a636203_z0i8h5.jpg
 tags: [php, laravel, package]
+intro: Discover how to use notifications with Sweet Alert and Laravel.
 ---
+
+This article covers how to user Sweet Alert Notifications with Laravel.
 
 ## Alerts are Front End Logs
 

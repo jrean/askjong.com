@@ -1,7 +1,10 @@
 title: Use Local Repository with Composer
 photo: v1477712345/type-set_bskj0p.jpg
 tags: [vcs, git, composer, php]
+intro: How to use a local vcs repository with Composer.
 ---
+This article covers how to use a local `vcs` repository with Composer.
+
 When developing composer packages it can be painful to commit and push (to
 Github for instance) for each change we have done then update composer for the
 project we are requiring that package. It is even worth when we just want to test
