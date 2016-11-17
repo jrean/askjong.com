@@ -1,7 +1,12 @@
 title: Use Sqlite with Homestead
 photo: v1477712069/9a2d8cf6_hre8u1.jpg
 tags: [laravel, lumen, php, sqlite, homestead]
+intro: How to properly use an Sqlite database with Laravel Homestead.
 ---
+
+This article covers how to properly use an `Sqlite` database with Laravel
+Homestead.
+
 Sometime a simple sqlite database suffices to get the job done.
 With Laravel, it's very quick and easy to configure connections.
 Unfortunately I had a hard time to figure out why the basic settings didn't

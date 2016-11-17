@@ -1,6 +1,7 @@
 title: Run Multiple Google reCAPTCHA on the same page
 photo: v1479110874/google-recaptcha_hwfpx5.jpg
 tags: [security, javascript, front-end]
+intro: How to run multiple Google reCAPTCHA on the same page.
 ---
 
 This article covers how to install, configure and enable multiple instances of
