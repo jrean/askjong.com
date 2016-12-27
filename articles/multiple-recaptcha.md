@@ -6,7 +6,7 @@ intro: How to run multiple Google reCAPTCHA on the same page.
 
 This article covers how to install, configure and enable multiple instances of
 Google reCAPTCHA on the same page. It doesn't cover how to handle the reCAPTCHA
-validation and submition to Google.
+validation and submission to Google.
 
 ## Install Google reCAPTCHA
 
